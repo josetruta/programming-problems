@@ -6,5 +6,6 @@
 - **B.** Dentist aoki - [Problema](https://atcoder.jp/contests/abc350/tasks/abc350_b) x [Solução](https://github.com/josetruta/programming-problems/blob/main/AD-HOC/dentist_aoki.py)
 - **B.** Ticket counter - [Problema](https://atcoder.jp/contests/abc358/tasks/abc358_b) x [Solução](https://github.com/josetruta/programming-problems/blob/main/AD-HOC/ticket_counter.py)
 - **C.** Move it - [Problema](https://atcoder.jp/contests/abc360/tasks/abc360_c) x [Solução](https://github.com/josetruta/programming-problems/blob/main/AD-HOC/move_it.py)
+- **D.** a-Good string - [Problema](https://codeforces.com/problemset/problem/1385/D) x [Solução](https://github.com/josetruta/programming-problems/blob/main/AD-HOC/string_aboa.py)
 - Primos - [Solução](https://github.com/josetruta/programming-problems/blob/main/AD-HOC/primos.py)
 - Base 2 - [Solução](https://github.com/josetruta/programming-problems/blob/main/AD-HOC/base_dois.py)
