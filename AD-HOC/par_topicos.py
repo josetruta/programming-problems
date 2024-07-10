@@ -23,5 +23,3 @@ for i in range(len(c)):
         if (res != 0) : cont += (n - res)
 
 print(cont)
-
-

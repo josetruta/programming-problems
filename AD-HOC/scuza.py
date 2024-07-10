@@ -1,5 +1,3 @@
-"""Em andamento."""
-
 testes = int(input())
 
 def soma_acumulada(lista):
@@ -15,26 +13,18 @@ def falso_sort(lista):
 
 def busca_binaria(lista, chave):
     inicio, fim = 0, len(lista) - 1
+    resposta = -1
 
     while (inicio <= fim):
         meio = (fim + inicio) // 2 
 
-        if (lista[meio] == chave):
-           return meio
-        elif (lista[meio] < chave):
+        if (lista[meio] <= chave):
+            resposta = meio
             inicio = meio + 1
-        elif (lista[meio] > chave):
+        else:
             fim = meio - 1
     
-    if (lista[meio] > chave): return meio - 1
-    return meio
-
-def busca_idx_max(lista, idx):
-    for i in range(idx, len(lista)):
-        if lista[i] > lista[idx]: 
-            return i - 1
-    return idx
-        
+    return resposta      
 
 
 for i in range(testes):
@@ -48,15 +38,6 @@ for i in range(testes):
     out = []
     for i in range(len(num_perguntas)):
         idx = busca_binaria(alturas_d, num_perguntas[i])
-        idx = busca_idx_max(alturas_d, idx)
-        out.append(alturas_total[idx + 1])
+        out.append(str(alturas_total[idx + 1]))
     
-    print(out)
-
-        
-
-
-
-    
-
-
+    print(' '.join(out))
