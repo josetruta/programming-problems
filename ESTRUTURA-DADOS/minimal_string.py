@@ -1,27 +1,14 @@
 s = list(input())
-copia = [(s[i], i) for i in range(len(s))]
-copia.sort()
-t, u = [], []
+t, u = [], ""
+abc = [0] * 26
 
-i, idx_menor = 0, 0
-while len(u) < len(s):
-    if (len(t) == 0):
-        t.append(s[i])
-        i += 1
-    elif (ord(t[-1]) <= ord(copia[idx_menor][0])):
-        u.append(t[-1])
-        t.pop()
-        idx_menor += 1
-    elif (copia[idx_menor][1] <= i):
-      idx_menor += 1
-    elif (i < len(s)):
-        t.append(s[i])
-        i += 1
-    else:
-        u.append(t[-1])
-        t.pop()
-    
-    print(u)
+for i in range(len(s)):
+    abc[ord(s[i]) - 97] += 1
 
-print(*u, sep = "")
-    
+for i in range(len(s)):
+    t.append(s[i])
+    abc[ord(s[i]) - 97] -= 1
+    while t and sum(abc[:(ord(t[-1]) - 97)]) == 0:
+        u += t.pop()
+        
+print(u)
