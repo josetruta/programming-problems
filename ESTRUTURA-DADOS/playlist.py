@@ -1,18 +1,19 @@
-# EM ANDAMENTO
-
 n = int(input())
 k = list(map(int, input().split()))
 
 songs = {}
-maximo, cont = 0, 0
-for i in range(n):
-    if (songs.get(k[i]) != None):
-        cont -= 1
-        if cont < 0: cont = 1
-        songs[k[i]] = i
+left, right = 0, 0
+maximo = 0
+while right < n:
+    if (songs.get(k[right]) == None):
+        songs[k[right]] = right
+        right += 1
     else:
-        songs[k[i]] = i
-        cont += 1
-    maximo = max(maximo, cont)
+        if (songs[k[right]] >= left):
+            left = songs[k[right]] + 1
+        songs[k[right]] = right
+        right += 1
+        
+    maximo = max(maximo, right - left)
 
 print(maximo)
