@@ -1,0 +1,17 @@
+# Problemas de Estrutura de Dados
+
+- **A.** Aliases - [Problema](https://codeforces.com/gym/104375/problem/A) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/aliases.py)
+- **A.** Hotelier - [Problema](https://codeforces.com/problemset/problem/1200/A) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/hotelier.py)
+- **B.** Chat order - [Problema](https://codeforces.com/problemset/problem/637/B) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/chat_order.py)
+- **B.** Table tennis - [Problema](https://codeforces.com/problemset/problem/879/B) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/table_tennis.py)
+- **B.** Social network - [Problema](https://codeforces.com/problemset/problem/1234/B2) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/zapzap.py)
+- **C.** ABBB - [Problema](https://codeforces.com/problemset/problem/1428/C) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/abbb.py)
+- **C.** Minimal string - [Problema](https://codeforces.com/problemset/problem/797/C) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/minimal_string.py)
+- **C.** Merge the balls - [Problema](https://atcoder.jp/contests/abc351/tasks/abc351_c?lang=en) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/merge_the_balls.py)
+- **C.** Powering the hero (hard version) - [Problema](https://codeforces.com/problemset/problem/1800/C2) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/heroi.py)
+- **C.** Fighting tournament - [Problema](https://codeforces.com/problemset/problem/1719/C) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/torneio.py)
+- **D.** Epic transformation - [Problema](https://codeforces.com/problemset/problem/1506/D) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/epic_transformation.py)
+- **D.** Productive meeting - [Problema](https://codeforces.com/problemset/problem/1579/D) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/reuniao_produtiva.py)
+- Playlist - [Problema](https://cses.fi/problemset/task/1141) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/playlist.py)
+- Largest rectangle in a histogram - [Problema](https://www.spoj.com/problems/HISTOGRA/en/) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/largest_rectangle.py)
+- Sum of two values - [Problema](https://cses.fi/problemset/task/1640) x [Solução](https://github.com/josetruta/programming-problems/blob/main/ESTRUTURA-DADOS/sum_twovalues.py)
