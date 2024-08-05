@@ -1,5 +1,14 @@
+from math import sqrt
+
 t = int(input())
 
 for _ in range(t):
-    a, b, c = [int(x) for x in input().split()]
+    n = int(input())
+    a = 1
+    b = n - 1
+    for num in range(2, int(sqrt(n)) + 1):
+        if (n % num == 0):
+            a = max(a, n // num)
+            b = n - a
+    print(a, b)
     

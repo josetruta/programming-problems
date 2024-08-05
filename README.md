@@ -9,6 +9,6 @@ Além disto, o repositório armazena meu progresso na resolução de problemas n
 
 - [**AD-HOC**](https://github.com/josetruta/programming-problems/tree/main/AD-HOC): Algoritmos provisórios destinados à um fim em específico.
 - [**ESTRUTURA DE DADOS**](https://github.com/josetruta/programming-problems/tree/main/ESTRUTURA-DADOS): Algoritmos desenvolvidos para aplicar os diversos tipos de estrutura de dados.
-- [**MATEMATICA**](https://github.com/josetruta/programming-problems/tree/main/ESTRUTURA-DADOS): Algoritmos desenvolvidos para aprimorar conceitos matemáticos.
+- [**MATEMATICA**](https://github.com/josetruta/programming-problems/tree/main/MATEMATICA): Algoritmos desenvolvidos para aprimorar conceitos matemáticos.
 - [**CONTESTS**](https://github.com/josetruta/programming-problems/tree/main/CONTESTS): Algoritmos desenvolvidos durante a
 realização de contests.
