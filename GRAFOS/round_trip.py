@@ -1,56 +1,49 @@
-from collections import deque
 import sys
-sys.setrecursionlimit(10**5 + 1)
+sys.setrecursionlimit(10**6 + 1)
+input = sys.stdin.readline
 
 n, m = [int(x) for x in input().split()]
  
 adj = [[] for _ in range(n + 1)]
-token = 0
 for i in range(m):
     u, v = [int(x) for x in input().split()]
-    if (i == 0): token = u
     adj[u].append(v)
     adj[v].append(u)
- 
-def has_cycle(source, visited):
-    queue = deque()
-    queue.append((source,0))
-    while len(queue) > 0:
-        v = queue.popleft()
-        if (visited[v[0]]):
-            return v
-        visited[v[0]] = True
-        for neighbour in adj[v[0]]:
-            if not visited[neighbour] and len(adj[neighbour]) > 1:
-                queue.append((neighbour, v[0]))
-    
-    return -1
 
-def dfs(curr, prev, visited, familia):
-    visited[curr] = True
-    for child in adj[curr]:
+def dfs(source, prev, visited, parent):
+    global inicio, fim
+    visited[source] = 1
+    for child in adj[source]:
         if (child == prev): continue
-        if not visited[child]:
-            familia[child] = curr  
-            return dfs(child, curr, visited, familia)
-        return curr, child
+        if (visited[child] == 0):
+            parent[child] = source 
+            dfs(child, source, visited, parent)
+            if (inicio): return
+        elif (visited[child] == 1):
+            fim = source
+            inicio = child
+            return
+    visited[source] = 2
  
- 
-visited = [False for _ in range(n+1)]
-vertice = has_cycle(token, visited)
+visited = [0 for _ in range(n+1)]
+parent = [0 for _ in range(n+1)]
+inicio = False
+fim = False
 
-if (vertice == -1): print("IMPOSSIBLE")
+for i in range(1, n+1):
+    if visited[i] == 0:
+        dfs(i, 0, visited, parent)
+    if (inicio): break
+
+if (not inicio): print("IMPOSSIBLE")
 else:
-    familia = {}
-    visited = [False for _ in range(n+1)]
-    fim, inicio = dfs(vertice[0], vertice[1], visited, familia)
     ciclo = []
+    u = fim
     ciclo.append(inicio)
-    ciclo.append(fim)
-    curr = fim
-    while curr != inicio:
-        ciclo.append(familia[curr])
-        curr = familia[curr]
-    
+    while u != inicio:
+        ciclo.append(u)
+        u = parent[u]
+    ciclo.append(inicio)
+
     print(len(ciclo))
     print(*ciclo)
