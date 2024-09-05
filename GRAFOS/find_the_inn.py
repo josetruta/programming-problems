@@ -1,14 +1,16 @@
 import sys
 from queue import PriorityQueue
 
-n, m = [int(x) for x in input().split()]
+n, m, t, k, p = [int(x) for x in input().split()]
+
+pinheiros = set(map(int, input().split()))
 adj = [[] for _ in range(n + 1)]
 
 for _ in range(m):
     a, b, w = [int(x) for x in input().split()]
-    adj[a].append((w, b))
-    adj[b].append((w, a))
-
+    adj[a].append((w if b not in pinheiros else w + t, b))
+    adj[b].append((w if a not in pinheiros else w + t, a))
+    
 def dijkstra(no):
     q = PriorityQueue()
     dist = [[10**11 + 1, 0] for _ in range(n+1)]
@@ -25,23 +27,28 @@ def dijkstra(no):
     
     return dist
 
-# O ERRO ESTÁ NA LÓGICA DO PATH
-
 distancias = dijkstra(1)
-#print(distancias)
-path = []
+print(distancias)
 curr = distancias[n][1]
 if curr == 0:
     print(-1)
     sys.exit(0)
+tempo = 0
+path = []
 path.append(n)
+tempo += distancias[n][0]
 path.append(curr)
+tempo += distancias[curr][0]
 while curr != 1:
     curr = distancias[curr][1]
     if curr == 0:
         print(-1)
         sys.exit(0)
     path.append(curr)
+    tempo += distancias[curr][0]
 
 for i in range(len(path) - 1, -1, -1):
     print(path[i], end=" ")
+
+print()
+print(tempo)
