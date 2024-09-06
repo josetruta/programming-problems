@@ -1,15 +1,15 @@
-import sys
 from queue import PriorityQueue
 
 n, m, t, k, p = [int(x) for x in input().split()]
 
-pinheiros = set(map(int, input().split()))
+if p != 0: pinheiros = set(map(int, input().split()))
+else: pinheiros = set()
 adj = [[] for _ in range(n + 1)]
 
 for _ in range(m):
     a, b, w = [int(x) for x in input().split()]
-    adj[a].append((w if b not in pinheiros else w + t, b))
-    adj[b].append((w if a not in pinheiros else w + t, a))
+    w = w * 60
+    adj[a].append((w if b not in pinheiros else w + k, b))
     
 def dijkstra(no):
     q = PriorityQueue()
@@ -28,27 +28,8 @@ def dijkstra(no):
     return dist
 
 distancias = dijkstra(1)
-print(distancias)
-curr = distancias[n][1]
-if curr == 0:
+if distancias[n][1] == 0:
     print(-1)
-    sys.exit(0)
-tempo = 0
-path = []
-path.append(n)
-tempo += distancias[n][0]
-path.append(curr)
-tempo += distancias[curr][0]
-while curr != 1:
-    curr = distancias[curr][1]
-    if curr == 0:
-        print(-1)
-        sys.exit(0)
-    path.append(curr)
-    tempo += distancias[curr][0]
-
-for i in range(len(path) - 1, -1, -1):
-    print(path[i], end=" ")
-
-print()
-print(tempo)
+elif distancias[n][0] > t * 60:
+    print(-1)
+else: print(distancias[n][0])
